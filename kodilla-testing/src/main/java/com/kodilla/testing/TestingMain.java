@@ -10,7 +10,7 @@ public class TestingMain {
 
         String result = simpleUser.getUserName();
 
-        if(result.equals("theForimUser")){
+        if(result.equals("theForumUser")){
             System.out.println("test OK");
         }
         else{
@@ -22,11 +22,11 @@ public class TestingMain {
 
         System.out.println("Pierwszy test jednostkowy");
 
-        Calculator calculator = new Calculator(5,4);
+        Calculator calculator = new Calculator();
 
-        int addResult = calculator.add();
+        int addResult = calculator.add(5,4);
 
-        int subtractResult = calculator.subtract();
+        int subtractResult = calculator.subtract(5,4);
 
         if(addResult == 9){
             System.out.println("Addition test OK");
