@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class OddNumbersExterminator {
 
-    ArrayList<Integer> evenNumbers = new ArrayList<Integer>();
+
 
     public ArrayList<Integer> exterminate(ArrayList<Integer> numbers){
+
+        ArrayList<Integer> evenNumbers = new ArrayList<Integer>();
 
         for(Integer loop: numbers){
             if(loop % 2 == 0){
