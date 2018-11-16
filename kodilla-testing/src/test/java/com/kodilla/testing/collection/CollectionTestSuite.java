@@ -3,6 +3,8 @@ import com.kodilla.testing.collection.OddNumbersExterminator;
 import org.junit.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class CollectionTestSuite {
 
@@ -31,10 +33,10 @@ public class CollectionTestSuite {
 
         OddNumbersExterminator exterminator = new OddNumbersExterminator();
 
-        ArrayList<Integer> testList = new ArrayList<>();
-        ArrayList<Integer> emptyList = new ArrayList<>();
+        List<Integer> testList = new ArrayList<>();
+        List<Integer> emptyList = new ArrayList<>();
 
-        ArrayList<Integer> result = exterminator.exterminate(testList);
+        List<Integer> result = exterminator.exterminate(testList);
         System.out.println("Testing " + result);
 
         Assert.assertEquals(emptyList,result);
@@ -46,21 +48,16 @@ public class CollectionTestSuite {
 
         OddNumbersExterminator exterminator = new OddNumbersExterminator();
 
-        ArrayList<Integer> theList = new ArrayList<>();
+        List<Integer> theList = new ArrayList<>();
 
         for(int i = 1; i <= 10; i++){
             theList.add(i);
         }
 
-        ArrayList<Integer> evenList = new ArrayList<>();
+        List<Integer> evenList = Arrays.asList(2,4,6,8,10);
 
-        evenList.add(2);
-        evenList.add(4);
-        evenList.add(6);
-        evenList.add(8);
-        evenList.add(10);
 
-        ArrayList<Integer> result = exterminator.exterminate(theList);
+        List<Integer> result = exterminator.exterminate(theList);
         System.out.println("Testing " + result);
 
         Assert.assertEquals(evenList,result);
