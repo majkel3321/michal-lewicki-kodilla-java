@@ -28,17 +28,6 @@ public class ShapeCollector {
 
     }
 
-   /* public String showFigures(){
-
-        StringBuilder figures = new StringBuilder(" ");
-
-        for (int i = 0; i < shapes.size(); i++){
-            figures.append(shapes.get(i));
-        }
-
-        return figures.toString();
-    }*/
-
    public List<Shape> showFigures(){
 
        return shapes;
