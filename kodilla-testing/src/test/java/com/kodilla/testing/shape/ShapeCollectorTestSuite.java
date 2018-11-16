@@ -34,7 +34,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testGetFigureIndexTooSmall(){
         ShapeCollector shape = new ShapeCollector();
-        Square square = new Square("squarerere",41.11);
+        Square square = new Square("Square",41.11);
         shape.addFigure(square);
 
         Assert.assertEquals(null,shape.getFigure(-1));
@@ -81,5 +81,5 @@ public class ShapeCollectorTestSuite {
     }
 
 
-    //test z getfigure kiedy indeks jest ujemny, kiedy indeks jest prawidłowy i kiedy jest zbyt duzy
+
 }
