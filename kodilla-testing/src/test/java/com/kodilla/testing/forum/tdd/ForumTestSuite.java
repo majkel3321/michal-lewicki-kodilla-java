@@ -1,7 +1,7 @@
 package com.kodilla.testing.forum.tdd;
-import com.kodilla.testing.forum.ForumComment;
-import com.kodilla.testing.forum.ForumPost;
-import com.kodilla.testing.forum.ForumUser;
+import com.kodilla.testing.forum1.CommentPostUser.ForumComment;
+import com.kodilla.testing.forum1.CommentPostUser.ForumPost;
+import com.kodilla.testing.forum1.CommentPostUser.ForumUser;
 import org.junit.*;
 
 //TestSuite for classes of Forum

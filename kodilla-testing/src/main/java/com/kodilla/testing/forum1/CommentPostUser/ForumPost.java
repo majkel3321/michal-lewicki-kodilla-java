@@ -1,4 +1,4 @@
-package com.kodilla.testing.forum;
+package com.kodilla.testing.forum1.CommentPostUser;
 
 import java.util.Objects;
 
