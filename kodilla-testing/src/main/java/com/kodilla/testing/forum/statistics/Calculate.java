@@ -16,7 +16,6 @@ public class Calculate implements Statistics {
     public Calculate(Statistics statistics){
 
         this.statistics = statistics;
-       // averagePostsPerUser = (double)statistics.postsCount()/(double)statistics.usersNames().size();
     }
 
 
