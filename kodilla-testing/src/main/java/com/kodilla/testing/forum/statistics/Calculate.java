@@ -35,20 +35,28 @@ public class Calculate implements Statistics {
        return statistics.commentsCount();
    }
 
-   public void calculateAdvStatistics(Statistics statistics){
 
-        if(postsCount() == 0 || usersNames().size() == 0){
-            averagePostsPerUser = 0;
-            averageCommentsPerUser = 0;
-            averageCommentsPerPost = 0;
-        }
-        else {
+  public void calculateAdvStatistics(Statistics statistics){
 
-            averagePostsPerUser = (double) statistics.postsCount() / (double) statistics.usersNames().size();
-            averageCommentsPerUser = (double)statistics.commentsCount() / (double)statistics.usersNames().size();
-            averageCommentsPerPost = (double)statistics.commentsCount() / (double)statistics.postsCount();
-        }
-   }
+      if (postsCount() > 0 ){
+          averageCommentsPerPost = (double)statistics.commentsCount()/(double)statistics.postsCount();
+      }
+
+      else{
+          averageCommentsPerPost = 0;
+      }
+
+      if (statistics.usersNames().size() > 0){
+          averagePostsPerUser = (double)statistics.postsCount()/(double)statistics.usersNames().size();
+          averageCommentsPerUser = (double)statistics.commentsCount()/(double)statistics.usersNames().size();
+      }
+
+      else{
+          averageCommentsPerUser = 0;
+          averagePostsPerUser = 0;
+      }
+
+  }
 
 
 
