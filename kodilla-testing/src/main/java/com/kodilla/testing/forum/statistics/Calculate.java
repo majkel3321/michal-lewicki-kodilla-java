@@ -6,8 +6,9 @@ import java.util.List;
 
 public class Calculate implements Statistics {
 
-    Statistics statistics;
-
+    List<String> usersNames = new ArrayList<>();
+    int postsCount;
+    int commentsCount;
     double averagePostsPerUser;
     double averageCommentsPerUser;
     double averageCommentsPerPost;
@@ -15,23 +16,26 @@ public class Calculate implements Statistics {
 
    public List<String> usersNames(){
 
-       return statistics.usersNames();
+       return usersNames;
    }
 
    public int postsCount(){
 
-       return statistics.postsCount();
+       return postsCount;
    }
 
    public int commentsCount(){
 
-       return statistics.commentsCount();
+       return commentsCount;
    }
 
 
   public void calculateAdvStatistics(Statistics statistics){
 
-       this.statistics = statistics;
+
+       usersNames = statistics.usersNames();
+       postsCount = statistics.postsCount();
+       commentsCount = statistics.commentsCount();
 
       if (postsCount() > 0 ){
           averageCommentsPerPost = (double)statistics.commentsCount()/(double)statistics.postsCount();
