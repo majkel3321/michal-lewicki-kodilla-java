@@ -13,13 +13,6 @@ public class Calculate implements Statistics {
     double averageCommentsPerPost;
 
 
-    public Calculate(Statistics statistics){
-
-        this.statistics = statistics;
-    }
-
-
-
    public List<String> usersNames(){
 
        return statistics.usersNames();
@@ -37,6 +30,8 @@ public class Calculate implements Statistics {
 
 
   public void calculateAdvStatistics(Statistics statistics){
+
+       this.statistics = statistics;
 
       if (postsCount() > 0 ){
           averageCommentsPerPost = (double)statistics.commentsCount()/(double)statistics.postsCount();
