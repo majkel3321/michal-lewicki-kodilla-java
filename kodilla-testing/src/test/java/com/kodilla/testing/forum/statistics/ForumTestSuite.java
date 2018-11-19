@@ -10,6 +10,22 @@ import static org.mockito.Mockito.when;
 public class ForumTestSuite {
 
     @Test
+    public void testPostsCount(){
+        Statistics statisticsMock = mock(Statistics.class);
+
+        int postsNumber = 100;
+
+        when(statisticsMock.postsCount()).thenReturn(postsNumber);
+
+        Calculate calculate = new Calculate();
+        calculate.calculateAdvStatistics(statisticsMock);
+
+        Assert.assertEquals(100,calculate.postsCount);
+    }
+
+
+
+    @Test
     public void testAveragePostsZero(){
 
         Statistics statisticsMock = mock(Statistics.class);
