@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Calculate implements Statistics {
 
-    List<String> usersNames = new ArrayList<>();
+   private List<String> usersNames = new ArrayList<>();
     int postsCount;
     int commentsCount;
     double averagePostsPerUser;

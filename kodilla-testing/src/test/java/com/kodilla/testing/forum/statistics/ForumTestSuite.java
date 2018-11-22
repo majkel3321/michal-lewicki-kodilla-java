@@ -10,6 +10,21 @@ import static org.mockito.Mockito.when;
 public class ForumTestSuite {
 
     @Test
+    public void testUsersNames(){
+        Statistics statisticsMock = mock(Statistics.class);
+        List<String> users = new ArrayList<>();
+        users.add("czlowiek");
+
+        when(statisticsMock.usersNames()).thenReturn(users);
+        Calculate calculate = new Calculate();
+        calculate.calculateAdvStatistics(statisticsMock);
+
+        Assert.assertEquals(1,calculate.usersNames().size());
+    }
+
+
+
+    @Test
     public void testPostsCount(){
         Statistics statisticsMock = mock(Statistics.class);
 
