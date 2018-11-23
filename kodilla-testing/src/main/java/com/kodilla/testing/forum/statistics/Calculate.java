@@ -14,6 +14,8 @@ public class Calculate implements Statistics {
     double averageCommentsPerPost;
 
 
+
+
    public List<String> usersNames(){
 
        return usersNames;
@@ -56,6 +58,23 @@ public class Calculate implements Statistics {
       }
 
   }
+
+
+  double calculateAverageAge(List<Person> people){
+       int sum = 0;
+
+
+       for(Person loop: people){
+           sum += loop.getAge();
+       }
+
+       return (double)sum/people.size();
+
+
+  }
+
+
+
 
 
 

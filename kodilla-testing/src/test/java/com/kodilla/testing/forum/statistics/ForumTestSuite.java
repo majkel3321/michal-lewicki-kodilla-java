@@ -3,6 +3,7 @@ import org.junit.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -226,6 +227,27 @@ public class ForumTestSuite {
         Assert.assertEquals(10,calculate.averageCommentsPerUser,0.001);
         Assert.assertEquals(1,calculate.averageCommentsPerPost,0.001);
         Assert.assertEquals(10,calculate.averagePostsPerUser,0.001);
+
+    }
+
+    @Test
+    public void testAverageAge(){
+
+        List<Person> theList= new ArrayList<>();
+        for(int i = 0; i<10; i++){
+            theList.add(new Person("adam","smith",i*10));
+        }
+
+        List<Person> secondList = new ArrayList<>();
+        secondList.add(new Person("adam","smith",55));
+
+
+        Calculate calculate = new Calculate();
+
+
+        Assert.assertEquals(45,calculate.calculateAverageAge(theList),0.001);
+        Assert.assertEquals(55,calculate.calculateAverageAge(secondList),0.001);
+
 
     }
 
