@@ -7,7 +7,7 @@ public class ExceptionHandling {
         FilghtSearch search = new FilghtSearch();
 
         try{
-            search.findFlight(new Flight("Moscow","New York"));
+            search.findFlight(new Flight("Moscow","Paris"));
 
         }catch (RouteNotFoundException e){
 

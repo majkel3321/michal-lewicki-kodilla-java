@@ -11,12 +11,18 @@ public class FilghtSearch {
 
         airport.put("Warsaw",true);
         airport.put("Berlin",true);
-        airport.put("Moscow",true);
+        airport.put("Moscow",false);
         airport.put("Paris",true);
 
         if (airport.containsKey(flight.getArrivalAirport()) && airport.containsKey(flight.getDepartureAirport())){
 
-            System.out.println("Route found!");
+            if (airport.get(flight.getArrivalAirport()).equals(true) && airport.get(flight.getDepartureAirport()).equals(true)){
+                System.out.println("Route found");
+            }
+
+            else{
+                System.out.println("Airport closed!");
+            }
         }
 
         else {
