@@ -16,12 +16,18 @@ public class FilghtSearch {
 
         if (airport.containsKey(flight.getArrivalAirport()) && airport.containsKey(flight.getDepartureAirport())){
 
-            if (airport.get(flight.getArrivalAirport()).equals(true) && airport.get(flight.getDepartureAirport()).equals(true)){
-                System.out.println("Route found");
-            }
+            if (airport.get(flight.getArrivalAirport()) != null && airport.get(flight.getDepartureAirport()) != null) {
 
-            else{
-                System.out.println("Airport closed!");
+                if (airport.get(flight.getArrivalAirport()).equals(true) && airport.get(flight.getDepartureAirport()).equals(true)) {
+                    System.out.println("Route found");
+                } else {
+                    System.out.println("Airport closed!");
+                }
+
+            }
+            else
+            {
+                System.out.println("Value was null!");
             }
         }
 
