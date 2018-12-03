@@ -3,12 +3,13 @@ package com.kodilla.exception.test;
 public class ExceptionHandling {
     public static void main(String[] args){
 
-        SecondChallenge secondChallenge = new SecondChallenge();
 
-        try {
-            secondChallenge.probablyWillThrowException(3,11);
+        FilghtSearch search = new FilghtSearch();
 
-        }catch (Exception e){
+        try{
+            search.findFlight(new Flight("Moscow","New York"));
+
+        }catch (RouteNotFoundException e){
 
             System.out.println("Something went wrong! Error: " + e);
         }
