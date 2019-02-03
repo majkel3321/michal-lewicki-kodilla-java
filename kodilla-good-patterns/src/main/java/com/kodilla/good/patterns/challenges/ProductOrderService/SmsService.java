@@ -9,4 +9,8 @@ public class SmsService implements InformationService {
     public void inform(User user) {
 
     }
+
+    public void sendTextMessage(){
+
+    }
 }
