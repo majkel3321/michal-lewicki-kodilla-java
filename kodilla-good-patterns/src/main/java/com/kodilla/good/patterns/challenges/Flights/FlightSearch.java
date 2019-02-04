@@ -1,5 +1,7 @@
 package com.kodilla.good.patterns.challenges.Flights;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,53 +31,37 @@ public class FlightSearch {
 
     public void searchFromTo(String from, String to){
 
-        String start2 = "";
 
-
-       List<String> flyTo = flightList.stream()
+       List<Flight> startA = flightList.stream()
                .filter(flight -> flight.getFrom().equals(from))
-               .map(flight -> flight.getTo())
                .collect(Collectors.toList());
 
-       List<String> flyFrom = flightList.stream()
+       List<Flight> endC = flightList.stream()
                .filter(flight -> flight.getTo().equals(to))
-               .map(flight -> flight.getFrom())
                .collect(Collectors.toList());
 
 
-        for (String loop : flyTo){
+       String startB = endC.stream()
+               .map(flight -> flight.getFrom())
+               .collect(Collectors.joining());
 
-            for (String loop1 : flyFrom){
+       flightList.stream()
+               .filter(flight -> flight.getFrom().equals(from))
+               .filter(flight -> flight.getTo().equals(startB))
+               .forEach(System.out::println);
 
-                if(loop.equals(loop1)){
-                     start2 = loop;
-                }
-            }
-        }
+       flightList.stream()
+               .filter(flight -> flight.getFrom().equals(startB))
+               .filter(flight -> flight.getTo().equals(to))
+               .forEach(System.out::println);
 
-        String finalStart = start2;
-        flightList.stream().filter(flight -> flight.getFrom().equals(from))
-                .filter(flight -> flight.getTo().equals(finalStart))
-                .forEach(System.out::println);
 
-        String finalStart1 = start2;
-        flightList.stream()
-                .filter(flight -> flight.getFrom().equals(finalStart1))
-                .filter(flight -> flight.getTo().equals(to))
-                .forEach(System.out::println);
+             }
+
+      }
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-    }
-}
