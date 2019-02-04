@@ -3,20 +3,19 @@ package com.kodilla.good.patterns.challenges.Flights;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Application {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String city;
+        String city1;
 
 
-        Flight flight1 = new Flight("Krakow","Warsaw","Gdansk");
-        Flight flight2 = new Flight("Moscow","Warsaw","Berlin");
-        Flight flight3 = new Flight("Rome","Berlin","Oslo");
-        Flight flight4 = new Flight("Krakow","Munich","Madrid");
-        Flight flight5 = new Flight("Moscow","Berlin","Madrid");
+        Flight flight1 = new Flight("Krakow","Moscow");
+        Flight flight2 = new Flight("Krakow","Rome");
+        Flight flight3 = new Flight("Moscow","Berlin");
+        Flight flight4 = new Flight("Moscow","Madrid");
+        Flight flight5 = new Flight("Madrid","Rome");
 
         List<Flight> flightsList = new ArrayList();
 
@@ -29,7 +28,9 @@ public class Application {
 
         FlightSearch flightSearch = new FlightSearch(flightsList);
 
-        System.out.println("Search flights\n1.From\n2.Through\n3.To");
+
+
+        System.out.println("Search flights\n1.From\n2.To\n3.From [  ] to [  ]");
         int choice = scanner.nextInt();
 
 
@@ -41,15 +42,18 @@ public class Application {
             break;
 
             case 2:
-                System.out.println("Search flights through: ");
-                city = scanner.next();
-                flightSearch.searchTrough(city);
-            break;
-
-            case 3:
                 System.out.println("Search flights to: ");
                 city = scanner.next();
                 flightSearch.searchTo(city);
+            break;
+
+            case 3:
+                System.out.println("Search flights from: ");
+                city = scanner.next();
+
+                System.out.println("Search flights to: ");
+                city1 = scanner.next();
+                flightSearch.searchFromTo(city,city1);
             break;
 
             default:
