@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class FlightSearch {
 
     private List<Flight> flightList;
-    private String start2;
+
 
     public FlightSearch(List<Flight> flightList){
         this.flightList = flightList;
@@ -29,6 +29,8 @@ public class FlightSearch {
 
     public void searchFromTo(String from, String to){
 
+        String start2 = "";
+
 
        List<String> flyTo = flightList.stream()
                .filter(flight -> flight.getFrom().equals(from))
@@ -45,20 +47,23 @@ public class FlightSearch {
 
             for (String loop1 : flyFrom){
 
-                if(loop == loop1){
-                    start2 = loop;
+                if(loop.equals(loop1)){
+                     start2 = loop;
                 }
             }
         }
 
+        String finalStart = start2;
         flightList.stream().filter(flight -> flight.getFrom().equals(from))
-                .filter(flight -> flight.getTo().equals(start2))
+                .filter(flight -> flight.getTo().equals(finalStart))
                 .forEach(System.out::println);
 
+        String finalStart1 = start2;
         flightList.stream()
-                .filter(flight -> flight.getFrom().equals(start2))
+                .filter(flight -> flight.getFrom().equals(finalStart1))
                 .filter(flight -> flight.getTo().equals(to))
                 .forEach(System.out::println);
+
 
 
 
