@@ -32,7 +32,7 @@ public class FlightSearch {
     public void searchFromTo(String from, String to) {
 
 
-       /*List<Flight> startA = flightList.stream()
+       List<Flight> startA = flightList.stream()
                .filter(flight -> flight.getFrom().equals(from))
                .collect(Collectors.toList());
 
@@ -40,26 +40,17 @@ public class FlightSearch {
                .filter(flight -> flight.getTo().equals(to))
                .collect(Collectors.toList());
 
-
-       String startB = endC.stream()
-               .map(flight -> flight.getFrom())
-               .collect(Collectors.joining());
-
-       flightList.stream()
-               .filter(flight -> flight.getFrom().equals(from))
-               .filter(flight -> flight.getTo().equals(startB))
-               .forEach(System.out::println);
-
-       flightList.stream()
-               .filter(flight -> flight.getFrom().equals(startB))
-               .filter(flight -> flight.getTo().equals(to))
-               .forEach(System.out::println);*/
+       for (Flight start: startA){
+           for (Flight end : endC){
+               if (start.getTo().equals(end.getFrom())){
+                   System.out.println(start);
+                   System.out.println(end);
+               }
+           }
+       }
 
 
-        List<String> toB = flightList.stream()
-                .filter(flight -> flight.getFrom().equals(from))
-                .map(flight -> flight.getTo())
-                .collect(Collectors.toList());
+
 
 
 

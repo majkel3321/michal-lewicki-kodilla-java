@@ -17,7 +17,7 @@ public class Application {
         Flight flight4 = new Flight("Moscow","Madrid");
         Flight flight5 = new Flight("Madrid","Rome");
 
-        List<Flight> flightsList = new ArrayList();
+        List<Flight> flightsList = new ArrayList<>();
 
         flightsList.add(flight1);
         flightsList.add(flight2);
