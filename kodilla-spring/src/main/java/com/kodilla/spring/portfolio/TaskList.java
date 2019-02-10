@@ -14,4 +14,11 @@ public class TaskList {
     public void addTasks(String task){
         tasks.add(task);
     }
+
+    public List<String> getTasks() {
+        return tasks;
+    }
+
+
+
 }
