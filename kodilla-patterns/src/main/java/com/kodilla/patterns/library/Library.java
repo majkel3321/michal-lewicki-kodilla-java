@@ -50,17 +50,4 @@ public class Library extends Prototype {
         return deepClonedLibrary;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Library library = (Library) o;
-        return Objects.equals(name, library.name) &&
-                Objects.equals(books, library.books);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, books);
-    }
 }
