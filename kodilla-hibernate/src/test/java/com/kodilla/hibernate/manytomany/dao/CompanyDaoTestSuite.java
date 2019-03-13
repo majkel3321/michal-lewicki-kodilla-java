@@ -85,7 +85,7 @@ public class CompanyDaoTestSuite {
         List<Company> companies = companyDao.retrieveCompaniesStartingWithThreeLetters("Dat");
 
         Assert.assertEquals("Walter",employees.get(0).getFirstname());
-        Assert.assertEquals(1,companies.size());
+        Assert.assertEquals("Data Masters",companies.get(0).getName());
 
         employeeDao.deleteById(id);
         companyDao.deleteById(id2);
