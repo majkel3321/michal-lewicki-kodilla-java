@@ -6,7 +6,7 @@ import org.junit.Test;
 public class PizzaTestSuite {
 
     @Test
-    public void testPizzaNew(){
+    public void testPizzaNew() {
 
         Pizza pizza = new Pizza.PizzaBuilder()
                 .ingredient("Onion")
@@ -20,7 +20,7 @@ public class PizzaTestSuite {
 
         int howManyIngredients = pizza.getIngredients().size();
 
-        Assert.assertEquals(3,howManyIngredients);
+        Assert.assertEquals(3, howManyIngredients);
 
     }
 }

@@ -5,7 +5,9 @@ import java.time.LocalDateTime;
 public interface Order {
 
     public Supplier getSupplier();
+
     public Product getProduct();
+
     public LocalDateTime getOrderTime();
 
 }

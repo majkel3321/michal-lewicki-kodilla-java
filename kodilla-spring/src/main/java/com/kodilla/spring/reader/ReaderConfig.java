@@ -15,20 +15,20 @@ public class ReaderConfig {
     Book book;
 
     @Bean
-    public Reader getReader(){
+    public Reader getReader() {
         return new Reader(book);
     }
 
     @Bean("book1")
     @Scope("prototype")
-    public Book getBookOne(){
+    public Book getBookOne() {
         return new Book("The Book number one");
     }
 
     @Bean("book2")
     @Scope("prototype")
     @Conditional({IfDayIsOddCondition.class})
-    public Book getBookTwo(){
+    public Book getBookTwo() {
         return new Book("The Book number two");
     }
 

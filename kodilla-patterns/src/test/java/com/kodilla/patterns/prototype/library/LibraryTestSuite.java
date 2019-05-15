@@ -11,14 +11,13 @@ import java.util.stream.IntStream;
 public class LibraryTestSuite {
 
     @Test
-    public void testGetBooks(){
+    public void testGetBooks() {
 
         Library library = new Library("Library 1");
 
         IntStream.iterate(1, n -> n + 1)
                 .limit(5)
-                .forEach(n -> library.getBooks().add(new Book("Title" + n ,"Author" + n , LocalDate.of(1980 + n,10,22))));
-
+                .forEach(n -> library.getBooks().add(new Book("Title" + n, "Author" + n, LocalDate.of(1980 + n, 10, 22))));
 
 
         //Making shallow copy of Library1
@@ -26,7 +25,7 @@ public class LibraryTestSuite {
         try {
             shallowCloneLibrary = library.shallowCopy();
             shallowCloneLibrary.setName("Library 2");
-        }catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
 
@@ -35,19 +34,17 @@ public class LibraryTestSuite {
         try {
             deepCloneLibrary = library.deepCopy();
             deepCloneLibrary.setName("Library 3");
-        }catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
-
 
 
         System.out.println(library);
         System.out.println(shallowCloneLibrary);
         System.out.println(deepCloneLibrary);
-        Assert.assertEquals(5,library.getBooks().size());
-        Assert.assertEquals(library.getBooks(),shallowCloneLibrary.getBooks());
-        Assert.assertEquals(library.getBooks(),deepCloneLibrary.getBooks());
-
+        Assert.assertEquals(5, library.getBooks().size());
+        Assert.assertEquals(library.getBooks(), shallowCloneLibrary.getBooks());
+        Assert.assertEquals(library.getBooks(), deepCloneLibrary.getBooks());
 
 
     }

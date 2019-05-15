@@ -22,11 +22,11 @@ public class CompanyDaoTestSuite {
     EmployeeDao employeeDao;
 
     @Test
-    public void testSaveManyToMany(){
+    public void testSaveManyToMany() {
 
-        Employee walterWhite = new Employee("Walter","White");
-        Employee stephanieClarkson = new Employee("Stephanie","Clarkson");
-        Employee lindaKovalsky = new Employee("Linda","Kovalsky");
+        Employee walterWhite = new Employee("Walter", "White");
+        Employee stephanieClarkson = new Employee("Stephanie", "Clarkson");
+        Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
 
         Company softwareMachine = new Company("Software Machine");
         Company dataMasters = new Company("Data Masters");
@@ -52,9 +52,9 @@ public class CompanyDaoTestSuite {
         int greyMatterId = greyMatter.getId();
 
 
-        Assert.assertNotEquals(0,softwareMachineId);
-        Assert.assertNotEquals(0,dataMastersId);
-        Assert.assertNotEquals(0,greyMatterId);
+        Assert.assertNotEquals(0, softwareMachineId);
+        Assert.assertNotEquals(0, dataMastersId);
+        Assert.assertNotEquals(0, greyMatterId);
 
         //CleanUp
         try {
@@ -66,13 +66,12 @@ public class CompanyDaoTestSuite {
         }
 
 
-
     }
 
     @Test
-    public void testNamedQueries(){
+    public void testNamedQueries() {
 
-        Employee employee = new Employee("Walter","White");
+        Employee employee = new Employee("Walter", "White");
         Company company = new Company("Data Masters");
 
         employeeDao.save(employee);
@@ -84,8 +83,8 @@ public class CompanyDaoTestSuite {
         List<Employee> employees = employeeDao.retrieveEmployeesWithLastname("White");
         List<Company> companies = companyDao.retrieveCompaniesStartingWithThreeLetters("Dat");
 
-        Assert.assertEquals("Walter",employees.get(0).getFirstname());
-        Assert.assertEquals("Data Masters",companies.get(0).getName());
+        Assert.assertEquals("Walter", employees.get(0).getFirstname());
+        Assert.assertEquals("Data Masters", companies.get(0).getName());
 
         employeeDao.deleteById(id);
         companyDao.deleteById(id2);

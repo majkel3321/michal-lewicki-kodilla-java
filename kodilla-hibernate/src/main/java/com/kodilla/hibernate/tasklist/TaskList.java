@@ -10,7 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "TASKLISTS")
-public final class TaskList{
+public final class TaskList {
 
 
     private int id;
@@ -18,13 +18,13 @@ public final class TaskList{
     private String description;
     private List<Task> tasks = new ArrayList<>();
 
-    public TaskList (String listName, String description){
+    public TaskList(String listName, String description) {
         this.listName = listName;
         this.description = description;
 
     }
 
-    public TaskList(){
+    public TaskList() {
 
     }
 
@@ -32,17 +32,17 @@ public final class TaskList{
     @GeneratedValue
     @NotNull
     @Column(name = "ID", unique = true)
-    public int getId(){
+    public int getId() {
         return id;
     }
 
     @Column(name = "LISTNAME")
-    public String getListName(){
+    public String getListName() {
         return listName;
     }
 
     @Column(name = "DESCRIPTION")
-    public String getDescription(){
+    public String getDescription() {
         return description;
     }
 

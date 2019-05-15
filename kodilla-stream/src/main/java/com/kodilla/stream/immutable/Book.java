@@ -6,22 +6,22 @@ public final class Book {
     private final String title;
     private final int publicationYear;
 
-    public Book(final String author, final String title, final int publicationYear){
+    public Book(final String author, final String title, final int publicationYear) {
         this.author = author;
         this.title = title;
         this.publicationYear = publicationYear;
 
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return title;
     }
 
-    public String getAuthor(){
+    public String getAuthor() {
         return author;
     }
 
-    public int getPublicationYear(){
+    public int getPublicationYear() {
         return publicationYear;
     }
 

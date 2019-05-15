@@ -10,7 +10,7 @@ import java.util.List;
 public class SandStorageTestSuite {
 
     @Test
-    public void testGetSandBeansQuantity(){
+    public void testGetSandBeansQuantity() {
         //Given
         List<SandStorage> continents = new ArrayList<>();
         continents.add(new Africa());
@@ -19,20 +19,19 @@ public class SandStorageTestSuite {
 
         //When
         BigDecimal totalSand = BigDecimal.ZERO;
-        for (SandStorage continent:continents){
+        for (SandStorage continent : continents) {
             totalSand = totalSand.add(continent.getSandBeansQuantity());
         }
 
         //Then
         BigDecimal expected = new BigDecimal("211111110903703703670");
-        Assert.assertEquals(expected,totalSand);
-
+        Assert.assertEquals(expected, totalSand);
 
 
     }
 
     @Test
-    public void testGetSandBeansQuantityWithReduce(){
+    public void testGetSandBeansQuantityWithReduce() {
         //Given
         List<SandStorage> continents = new ArrayList<>();
         continents.add(new Africa());
@@ -42,10 +41,10 @@ public class SandStorageTestSuite {
         //When
         BigDecimal totalSand = continents.stream()
                 .map(SandStorage::getSandBeansQuantity)
-                .reduce(BigDecimal.ZERO,(sum , current) -> sum = sum.add(current));
+                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current));
         //Then
         BigDecimal expectedSand = new BigDecimal("211111110903703703670");
-        Assert.assertEquals(expectedSand,totalSand);
+        Assert.assertEquals(expectedSand, totalSand);
 
     }
 }

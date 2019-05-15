@@ -10,11 +10,11 @@ import java.util.stream.IntStream;
 public class ArrayOperaionsTestSuite {
 
     @Test
-    public void testGetAverage(){
+    public void testGetAverage() {
 
         int[] tab = new int[20];
 
-        for(int i = 0; i < 20; i++){
+        for (int i = 0; i < 20; i++) {
             tab[i] = i + 11;
         }
 
@@ -22,6 +22,6 @@ public class ArrayOperaionsTestSuite {
 
         double average = calculate.getAverage(tab);
 
-        Assert.assertEquals(20.5,average,0.001);
+        Assert.assertEquals(20.5, average, 0.001);
     }
 }

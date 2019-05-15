@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StreamMain {
-    public static void main(String[]args){
+    public static void main(String[] args) {
 
 
      /*   Forum forum = new Forum();
@@ -34,19 +34,7 @@ public class StreamMain {
                 .forEach(System.out::println);*/
 
 
-
-
-
-     //Country poland = new Country(new BigDecimal("38000000"));
-
-
-
-
-
-
-
-
-
+        //Country poland = new Country(new BigDecimal("38000000"));
 
 
     }

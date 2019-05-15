@@ -52,12 +52,9 @@ public class BoardTestSuite {
         try {
             deepClonedBoard = board.deepCopy();
             deepClonedBoard.setName("Project number 3");
-        }catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
-
-
-
 
 
         //When
@@ -70,10 +67,10 @@ public class BoardTestSuite {
 
 
         Assert.assertEquals(2, board.getLists().size());
-        Assert.assertEquals(2,clonedBoard.getLists().size());
-        Assert.assertEquals(3,deepClonedBoard.getLists().size());
-        Assert.assertEquals(clonedBoard.getLists(),board.getLists());
-       // Assert.assertEquals(deepClonedBoard.getLists(),board.getLists());
+        Assert.assertEquals(2, clonedBoard.getLists().size());
+        Assert.assertEquals(3, deepClonedBoard.getLists().size());
+        Assert.assertEquals(clonedBoard.getLists(), board.getLists());
+        // Assert.assertEquals(deepClonedBoard.getLists(),board.getLists());
 
 
     }

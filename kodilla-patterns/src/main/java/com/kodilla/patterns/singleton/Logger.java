@@ -5,14 +5,14 @@ public class Logger {
     private static Logger loggerInstance = null;
     private String lastLog = "";
 
-    private Logger(){
+    private Logger() {
 
     }
 
-    public static Logger getInstance(){
-        if (loggerInstance == null){
-            synchronized (Logger.class){
-                if (loggerInstance == null){
+    public static Logger getInstance() {
+        if (loggerInstance == null) {
+            synchronized (Logger.class) {
+                if (loggerInstance == null) {
                     loggerInstance = new Logger();
                 }
             }
@@ -21,13 +21,13 @@ public class Logger {
         return loggerInstance;
     }
 
-    public void log(String log){
+    public void log(String log) {
 
         this.lastLog = log;
-        System.out.println("Log : [ " + log +  " ]");
+        System.out.println("Log : [ " + log + " ]");
     }
 
-    public String getLastLog(){
+    public String getLastLog() {
         return lastLog;
     }
 }

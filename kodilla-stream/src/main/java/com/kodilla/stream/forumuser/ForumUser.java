@@ -11,13 +11,13 @@ public final class ForumUser {
     private final LocalDate dateOfBirth;
 
     public ForumUser(final int signature, final String username, final char sex,
-                     final int postsQuantity, int yearOfBirth, int monthOfBirth, int dayOfBirth){
+                     final int postsQuantity, int yearOfBirth, int monthOfBirth, int dayOfBirth) {
 
         this.signature = signature;
         this.username = username;
         this.sex = sex;
         this.postsQuantity = postsQuantity;
-        this.dateOfBirth = LocalDate.of(yearOfBirth,monthOfBirth,dayOfBirth);
+        this.dateOfBirth = LocalDate.of(yearOfBirth, monthOfBirth, dayOfBirth);
     }
 
     public int getSignature() {

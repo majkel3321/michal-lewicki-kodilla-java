@@ -11,11 +11,11 @@ public class Application {
         String city1;
 
 
-        Flight flight1 = new Flight("Krakow","Moscow");
-        Flight flight2 = new Flight("Krakow","Rome");
-        Flight flight3 = new Flight("Moscow","Berlin");
-        Flight flight4 = new Flight("Moscow","Madrid");
-        Flight flight5 = new Flight("Madrid","Rome");
+        Flight flight1 = new Flight("Krakow", "Moscow");
+        Flight flight2 = new Flight("Krakow", "Rome");
+        Flight flight3 = new Flight("Moscow", "Berlin");
+        Flight flight4 = new Flight("Moscow", "Madrid");
+        Flight flight5 = new Flight("Madrid", "Rome");
 
         List<Flight> flightsList = new ArrayList<>();
 
@@ -29,23 +29,22 @@ public class Application {
         FlightSearch flightSearch = new FlightSearch(flightsList);
 
 
-
         System.out.println("Search flights\n1.From\n2.To\n3.From [  ] to [  ]");
         int choice = scanner.nextInt();
 
 
-        switch (choice){
+        switch (choice) {
             case 1:
                 System.out.println("Search flights from: ");
                 city = scanner.next();
                 flightSearch.searchFrom(city);
-            break;
+                break;
 
             case 2:
                 System.out.println("Search flights to: ");
                 city = scanner.next();
                 flightSearch.searchTo(city);
-            break;
+                break;
 
             case 3:
                 System.out.println("Search flights from: ");
@@ -53,17 +52,13 @@ public class Application {
 
                 System.out.println("Search flights to: ");
                 city1 = scanner.next();
-                flightSearch.searchFromTo(city,city1);
-            break;
+                flightSearch.searchFromTo(city, city1);
+                break;
 
             default:
                 System.out.println("Wrong number!");
 
         }
-
-
-
-
 
 
     }

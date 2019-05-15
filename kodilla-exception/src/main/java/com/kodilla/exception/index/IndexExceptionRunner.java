@@ -1,10 +1,9 @@
 package com.kodilla.exception.index;
 
 public class IndexExceptionRunner {
-    public static void main(String[]args){
+    public static void main(String[] args) {
 
         VideoCollector videoCollector = new VideoCollector();
-
 
 
         if (videoCollector.getCollection().size() > 1) {

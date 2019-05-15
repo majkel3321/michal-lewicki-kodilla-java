@@ -8,15 +8,15 @@ public final class SimpleInvoice {
 
     private final List<SimpleItem> items = new ArrayList<>();
 
-    public void addItem(SimpleItem item){
+    public void addItem(SimpleItem item) {
         items.add(item);
     }
 
-    public void removeItem(SimpleItem item){
+    public void removeItem(SimpleItem item) {
         items.remove(item);
     }
 
-    public double getValuesToPay(){
+    public double getValuesToPay() {
         return items.stream()
                 .collect(Collectors.summingDouble(SimpleItem::getValue));
     }

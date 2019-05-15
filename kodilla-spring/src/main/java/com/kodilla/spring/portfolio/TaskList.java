@@ -7,18 +7,17 @@ public class TaskList {
 
     private List<String> tasks;
 
-    public TaskList(){
+    public TaskList() {
         this.tasks = new ArrayList<>();
     }
 
-    public void addTasks(String task){
+    public void addTasks(String task) {
         tasks.add(task);
     }
 
     public List<String> getTasks() {
         return tasks;
     }
-
 
 
 }

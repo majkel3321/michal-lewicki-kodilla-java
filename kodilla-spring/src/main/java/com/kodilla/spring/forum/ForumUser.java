@@ -7,11 +7,11 @@ public class ForumUser {
 
     private String username;
 
-    public ForumUser(){
+    public ForumUser() {
         this.username = "John Smith";
     }
 
-    public String getUsername(){
+    public String getUsername() {
         return username;
     }
 

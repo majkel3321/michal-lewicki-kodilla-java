@@ -8,9 +8,9 @@ public class PurchaseRequestRetreiver {
 
         User user = new User("John", "Doe");
         LocalDateTime purchaseTime = LocalDateTime.of(2019, 2, 9, 14, 55);
-        Item item = new Item("hammer",15);
+        Item item = new Item("hammer", 15);
 
-        return new PurchaseRequest(user,purchaseTime,item);
+        return new PurchaseRequest(user, purchaseTime, item);
     }
 
 

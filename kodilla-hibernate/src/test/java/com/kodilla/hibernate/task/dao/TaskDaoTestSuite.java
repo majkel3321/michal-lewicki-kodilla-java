@@ -23,10 +23,10 @@ public class TaskDaoTestSuite {
     private static final String DESCRIPTION = "Test: Learn Hibernate";
 
     @Test
-    public void testTaskDaoSave(){
+    public void testTaskDaoSave() {
 
         //Given
-        Task task = new Task(DESCRIPTION,7);
+        Task task = new Task(DESCRIPTION, 7);
 
         //When
         taskDao.save(task);
@@ -41,10 +41,10 @@ public class TaskDaoTestSuite {
     }
 
     @Test
-    public void testTaskDaoFindByDuration(){
+    public void testTaskDaoFindByDuration() {
 
         //Given
-        Task task = new Task(DESCRIPTION,7);
+        Task task = new Task(DESCRIPTION, 7);
         taskDao.save(task);
         int duration = task.getDuration();
 
@@ -52,7 +52,7 @@ public class TaskDaoTestSuite {
         List<Task> readTasks = taskDao.findByDuration(duration);
 
         //Then
-        Assert.assertEquals(1,readTasks.size());
+        Assert.assertEquals(1, readTasks.size());
 
         //CleanUp
         int id = readTasks.get(0).getId();
@@ -60,15 +60,15 @@ public class TaskDaoTestSuite {
     }
 
     @Test
-    public void testTasksDaoSaveWithFinancialDetails(){
+    public void testTasksDaoSaveWithFinancialDetails() {
 
         Task task = new Task(DESCRIPTION, 30);
-        task.setTaskFinancialDetails(new TaskFinancialDetails(new BigDecimal(120),false));
+        task.setTaskFinancialDetails(new TaskFinancialDetails(new BigDecimal(120), false));
 
         taskDao.save(task);
         int id = task.getId();
 
-        Assert.assertNotEquals(0,id);
+        Assert.assertNotEquals(0, id);
 
 
     }

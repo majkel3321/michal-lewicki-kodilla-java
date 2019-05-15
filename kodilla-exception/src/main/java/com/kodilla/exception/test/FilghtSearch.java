@@ -5,16 +5,16 @@ import java.util.Map;
 
 public class FilghtSearch {
 
-    public void findFlight(Flight flight) throws RouteNotFoundException{
+    public void findFlight(Flight flight) throws RouteNotFoundException {
 
-        Map<String,Boolean> airport = new HashMap<>();
+        Map<String, Boolean> airport = new HashMap<>();
 
-        airport.put("Warsaw",true);
-        airport.put("Berlin",true);
-        airport.put("Moscow",false);
-        airport.put("Paris",true);
+        airport.put("Warsaw", true);
+        airport.put("Berlin", true);
+        airport.put("Moscow", false);
+        airport.put("Paris", true);
 
-        if (airport.containsKey(flight.getArrivalAirport()) && airport.containsKey(flight.getDepartureAirport())){
+        if (airport.containsKey(flight.getArrivalAirport()) && airport.containsKey(flight.getDepartureAirport())) {
 
             if (airport.get(flight.getArrivalAirport()) != null && airport.get(flight.getDepartureAirport()) != null) {
 
@@ -24,14 +24,10 @@ public class FilghtSearch {
                     System.out.println("Airport closed!");
                 }
 
-            }
-            else
-            {
+            } else {
                 System.out.println("Value was null!");
             }
-        }
-
-        else {
+        } else {
 
             throw new RouteNotFoundException("Airport not found!");
         }

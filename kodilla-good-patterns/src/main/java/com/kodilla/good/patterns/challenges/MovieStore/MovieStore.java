@@ -30,7 +30,7 @@ class MovieStore {
         return booksTitlesWithTranslations;
     }
 
-    public static void main(String[]args){
+    public static void main(String[] args) {
 
         MovieStore movieStore = new MovieStore();
 
@@ -41,10 +41,7 @@ class MovieStore {
         System.out.println(listOfBooks);
 
 
-
     }
-
-
 
 
 }

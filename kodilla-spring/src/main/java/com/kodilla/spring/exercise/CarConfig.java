@@ -7,8 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class CarConfig {
 
     @Bean("diesel")
-    public Engine getEngine()
-    {
+    public Engine getEngine() {
         return new DieselEngine();
     }
 }

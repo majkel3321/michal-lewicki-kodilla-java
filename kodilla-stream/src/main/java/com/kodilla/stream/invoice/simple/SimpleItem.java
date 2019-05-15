@@ -18,7 +18,7 @@ public final class SimpleItem {
         return quantity;
     }
 
-    public double getValue(){
+    public double getValue() {
         return product.getProductPrice() * quantity;
     }
 

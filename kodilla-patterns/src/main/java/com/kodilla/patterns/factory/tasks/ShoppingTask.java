@@ -14,18 +14,18 @@ public class ShoppingTask implements Task {
     }
 
     @Override
-    public String getTaskName(){
+    public String getTaskName() {
         return taskName;
     }
 
     @Override
-    public void executeTask(){
+    public void executeTask() {
         System.out.println("Buying " + quantity + " " + whatToBuy + " in progress...");
         isTaskExecuted = true;
     }
 
     @Override
-    public boolean isTaskExecuted(){
+    public boolean isTaskExecuted() {
         return isTaskExecuted;
     }
 }

@@ -5,18 +5,18 @@ public class SimpleUser {
     private String realname;
 
 
-    public SimpleUser(String username, String realname){
+    public SimpleUser(String username, String realname) {
         this.username = username;
         this.realname = realname;
 
     }
 
-    public String getUsername(){
+    public String getUsername() {
 
         return username;
     }
 
-    public String getRealname(){
+    public String getRealname() {
         return realname;
     }
 }

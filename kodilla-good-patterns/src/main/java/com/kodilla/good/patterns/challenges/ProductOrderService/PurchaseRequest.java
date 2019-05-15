@@ -8,18 +8,18 @@ public class PurchaseRequest {
     private LocalDateTime purchaseTime;
     private Item item;
 
-    public PurchaseRequest(final User user, final LocalDateTime purchaseTime, final Item item){
+    public PurchaseRequest(final User user, final LocalDateTime purchaseTime, final Item item) {
         this.user = user;
         this.purchaseTime = purchaseTime;
         this.item = item;
 
     }
 
-    public User getUser(){
+    public User getUser() {
         return user;
     }
 
-    public LocalDateTime getPurchaseTime(){
+    public LocalDateTime getPurchaseTime() {
         return purchaseTime;
     }
 

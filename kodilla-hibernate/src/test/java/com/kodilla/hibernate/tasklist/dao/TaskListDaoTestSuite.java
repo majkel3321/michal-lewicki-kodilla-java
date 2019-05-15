@@ -27,15 +27,15 @@ public class TaskListDaoTestSuite {
 
 
     @Test
-    public void testFindByListName(){
+    public void testFindByListName() {
 
-        TaskList taskList = new TaskList("FIRST","FirstList");
+        TaskList taskList = new TaskList("FIRST", "FirstList");
         taskListDao.save(taskList);
 
         List<TaskList> readTaskList = taskListDao.findByListName(taskList.getListName());
         //Optional<TaskList>readList1 = taskListDao.findByListName(taskList.getListName());
 
-        Assert.assertEquals(1,readTaskList.size());
+        Assert.assertEquals(1, readTaskList.size());
 
         int id = readTaskList.get(0).getId();
         taskListDao.deleteById(id);
@@ -44,16 +44,16 @@ public class TaskListDaoTestSuite {
     }
 
     @Test
-    public void testTaskListDaoSaveWithTasks(){
+    public void testTaskListDaoSaveWithTasks() {
 
-        Task task = new Task("Test: Learn Hibernate",14);
-        Task task2 = new Task("Test: Write some entities",3);
-        TaskFinancialDetails tfd = new TaskFinancialDetails(new BigDecimal(20),false);
-        TaskFinancialDetails tfd2 = new TaskFinancialDetails(new BigDecimal(10),false);
+        Task task = new Task("Test: Learn Hibernate", 14);
+        Task task2 = new Task("Test: Write some entities", 3);
+        TaskFinancialDetails tfd = new TaskFinancialDetails(new BigDecimal(20), false);
+        TaskFinancialDetails tfd2 = new TaskFinancialDetails(new BigDecimal(10), false);
         task.setTaskFinancialDetails(tfd);
         task2.setTaskFinancialDetails(tfd2);
 
-        TaskList taskList = new TaskList("LIST1","ToDo tasks");
+        TaskList taskList = new TaskList("LIST1", "ToDo tasks");
         taskList.getTasks().add(task);
         taskList.getTasks().add(task2);
         task.setTaskList(taskList);
@@ -62,7 +62,7 @@ public class TaskListDaoTestSuite {
         taskListDao.save(taskList);
         int id = taskList.getId();
 
-        Assert.assertNotEquals(0,id);
+        Assert.assertNotEquals(0, id);
 
         taskListDao.deleteById(id);
 
@@ -70,25 +70,25 @@ public class TaskListDaoTestSuite {
     }
 
     @Test
-    public void testNamedQueries(){
+    public void testNamedQueries() {
 
         //Given
-        Task task1 = new Task("Test: Study Hibernate",3);
-        Task task2 = new Task("Test : Practice Named Queries",6);
-        Task task3 = new Task("Test: Study native queries",7);
-        Task task4 = new Task("Test: Make some tests",13);
+        Task task1 = new Task("Test: Study Hibernate", 3);
+        Task task2 = new Task("Test : Practice Named Queries", 6);
+        Task task3 = new Task("Test: Study native queries", 7);
+        Task task4 = new Task("Test: Make some tests", 13);
 
-        TaskFinancialDetails tfd1 = new TaskFinancialDetails(new BigDecimal(5),false);
-        TaskFinancialDetails tfd2 = new TaskFinancialDetails(new BigDecimal(10),false);
-        TaskFinancialDetails tfd3 = new TaskFinancialDetails(new BigDecimal(20),false);
-        TaskFinancialDetails tfd4 = new TaskFinancialDetails(new BigDecimal(15),false);
+        TaskFinancialDetails tfd1 = new TaskFinancialDetails(new BigDecimal(5), false);
+        TaskFinancialDetails tfd2 = new TaskFinancialDetails(new BigDecimal(10), false);
+        TaskFinancialDetails tfd3 = new TaskFinancialDetails(new BigDecimal(20), false);
+        TaskFinancialDetails tfd4 = new TaskFinancialDetails(new BigDecimal(15), false);
 
         task1.setTaskFinancialDetails(tfd1);
         task2.setTaskFinancialDetails(tfd2);
         task3.setTaskFinancialDetails(tfd3);
         task4.setTaskFinancialDetails(tfd4);
 
-        TaskList taskList = new TaskList("LIST1","ToDo tasks");
+        TaskList taskList = new TaskList("LIST1", "ToDo tasks");
         taskList.getTasks().add(task1);
         taskList.getTasks().add(task2);
         taskList.getTasks().add(task3);
@@ -110,11 +110,11 @@ public class TaskListDaoTestSuite {
         List<Task> durationLongerThenTasks = taskDao.retrieveTasksWithDurationLongerThan(6);
 
         //Then
-        try{
-            Assert.assertEquals(1,longTask.size());
-            Assert.assertEquals(3,shortTasks.size());
-            Assert.assertEquals(3,enoughTimeTasks.size());
-            Assert.assertEquals(2,durationLongerThenTasks.size());
+        try {
+            Assert.assertEquals(1, longTask.size());
+            Assert.assertEquals(3, shortTasks.size());
+            Assert.assertEquals(3, enoughTimeTasks.size());
+            Assert.assertEquals(2, durationLongerThenTasks.size());
         } finally {
             //CleanUp
             taskListDao.deleteById(id);

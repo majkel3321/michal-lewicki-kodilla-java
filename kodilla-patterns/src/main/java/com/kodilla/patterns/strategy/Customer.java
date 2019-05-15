@@ -13,11 +13,11 @@ public class Customer {
         return name;
     }
 
-    public void setBuyPredictor(BuyPredictor buyPredictor){
+    public void setBuyPredictor(BuyPredictor buyPredictor) {
         this.buyPredictor = buyPredictor;
     }
 
-    public String predict(){
+    public String predict() {
         return buyPredictor.predictWhatToBuy();
     }
 

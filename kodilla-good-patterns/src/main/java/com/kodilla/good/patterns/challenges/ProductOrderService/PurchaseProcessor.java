@@ -8,7 +8,7 @@ public class PurchaseProcessor {
 
     public PurchaseProcessor(final InformationService informationService,
                              final PurchaseRespository purchaseRespository,
-                             final PurchaseService purchaseService){
+                             final PurchaseService purchaseService) {
 
         this.informationService = informationService;
         this.purchaseRespository = purchaseRespository;
@@ -16,17 +16,16 @@ public class PurchaseProcessor {
     }
 
 
-    public PurchaseDto process(final PurchaseRequest purchaseRequest){
+    public PurchaseDto process(final PurchaseRequest purchaseRequest) {
 
         boolean isPurchased = purchaseService.purchase(purchaseRequest.getUser(), purchaseRequest.getPurchaseTime());
 
-        if (isPurchased){
+        if (isPurchased) {
             informationService.inform(purchaseRequest.getUser());
             purchaseRespository.createPurchase(purchaseRequest.getUser(), purchaseRequest.getPurchaseTime());
-            return new PurchaseDto(purchaseRequest.getUser(),true);
-        }
-        else{
-            return new PurchaseDto(purchaseRequest.getUser(),false);
+            return new PurchaseDto(purchaseRequest.getUser(), true);
+        } else {
+            return new PurchaseDto(purchaseRequest.getUser(), false);
         }
 
 

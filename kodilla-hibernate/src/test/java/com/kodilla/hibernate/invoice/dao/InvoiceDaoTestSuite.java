@@ -25,16 +25,16 @@ public class InvoiceDaoTestSuite {
     @Autowired
     InvoiceDao invoiceDao;
 
-   @Test
-    public void testInvoiceDaoSave(){
+    @Test
+    public void testInvoiceDaoSave() {
 
         Product product1 = new Product("Table");
         Product product2 = new Product("Chair");
         Product product3 = new Product("Lamp");
         Product product4 = new Product("Carpet");
 
-        Item item1 = new Item(new BigDecimal(1000),12,new BigDecimal(900));
-        Item item2 = new Item(new BigDecimal(1300),14,new BigDecimal(1200));
+        Item item1 = new Item(new BigDecimal(1000), 12, new BigDecimal(900));
+        Item item2 = new Item(new BigDecimal(1300), 14, new BigDecimal(1200));
 
         Invoice invoice = new Invoice("1");
 
@@ -53,14 +53,9 @@ public class InvoiceDaoTestSuite {
         invoiceDao.save(invoice);
         int id = invoice.getId();
 
-        Assert.assertNotEquals(0,id);
+        Assert.assertNotEquals(0, id);
 
         invoiceDao.deleteById(id);
-
-
-
-
-
 
 
     }

@@ -39,7 +39,7 @@ public class Product {
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY
     )
-    public List<Item> getItems(){
+    public List<Item> getItems() {
         return items;
     }
 

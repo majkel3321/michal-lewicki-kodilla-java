@@ -6,7 +6,7 @@ import org.junit.Test;
 public class ForumUserTestSuite {
 
     @Test
-    public void testGetLocationsOfFriends(){
+    public void testGetLocationsOfFriends() {
 
         //Given
         ForumUser user1 = new ForumUser("alan01", "Alan Kosovsky", "Washington");
@@ -46,19 +46,18 @@ public class ForumUserTestSuite {
         //   user7:  "Washington"
         //   user10: "Miami"
 
-        Assert.assertEquals(3,user1.getLocationsOfFriends().size());
+        Assert.assertEquals(3, user1.getLocationsOfFriends().size());
         Assert.assertTrue(user1.getLocationsOfFriends().contains("Key West"));
         Assert.assertTrue(user1.getLocationsOfFriends().contains("Washington"));
         Assert.assertTrue(user1.getLocationsOfFriends().contains("Miami"));
         Assert.assertFalse(user1.getLocationsOfFriends().contains("Orlando"));
 
 
-
     }
 
 
     @Test
-    public void testGetLocationOfFriendsOfFriends(){
+    public void testGetLocationOfFriendsOfFriends() {
         //Given
         //Create users
         ForumUser user1 = new ForumUser("alan01", "Alan Kosovsky", "Washington");
@@ -103,18 +102,14 @@ public class ForumUserTestSuite {
         //           user3: "Key West"
         //   user10: user1: - should be skipped ("this" in context of user1)
 
-        Assert.assertEquals(3,user1.getLocationsOfFriends().size());
+        Assert.assertEquals(3, user1.getLocationsOfFriends().size());
         Assert.assertTrue(user1.getLocationOfFriendsOfFriends().contains("Key West"));
         Assert.assertTrue(user1.getLocationOfFriendsOfFriends().contains("Washington"));
         Assert.assertTrue(user1.getLocationOfFriendsOfFriends().contains("Miami"));
         Assert.assertFalse(user1.getLocationOfFriendsOfFriends().contains("Orlando"));
 
 
-
-
-
     }
-
 
 
 }

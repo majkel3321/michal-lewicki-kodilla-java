@@ -8,27 +8,27 @@ public class TaskList {
     final private String name;
     final private List<Task> tasks = new ArrayList<>();
 
-    public TaskList(final String name){
+    public TaskList(final String name) {
         this.name = name;
     }
 
-    public List<Task> getTasks(){
+    public List<Task> getTasks() {
         return tasks;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-   @Override
-    public String toString(){
+    @Override
+    public String toString() {
         String s = "     List [ " + name + " ]";
-        for (Task task : tasks){
+        for (Task task : tasks) {
             s = s + "\n" + task.toString();
         }
 
         return s;
-   }
+    }
 
 
 }

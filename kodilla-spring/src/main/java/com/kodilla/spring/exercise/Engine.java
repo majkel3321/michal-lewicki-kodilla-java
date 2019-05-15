@@ -1,6 +1,6 @@
 package com.kodilla.spring.exercise;
 
-public interface Engine  {
+public interface Engine {
 
     int speedUp(int kmh);
 }

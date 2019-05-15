@@ -10,7 +10,7 @@ import java.util.List;
 public class WorldTestSuite {
 
     @Test
-    public void testGetPeopleQuantity(){
+    public void testGetPeopleQuantity() {
 
         List<Country> europe = new ArrayList<>();
         List<Country> america = new ArrayList<>();
@@ -38,22 +38,7 @@ public class WorldTestSuite {
 
         BigDecimal expectedPopulation = new BigDecimal("483000000");
 
-        Assert.assertEquals(expectedPopulation,world.getPeopleQuantity());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        Assert.assertEquals(expectedPopulation, world.getPeopleQuantity());
 
 
     }

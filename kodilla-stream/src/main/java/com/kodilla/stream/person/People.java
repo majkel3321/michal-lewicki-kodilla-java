@@ -1,10 +1,11 @@
 package com.kodilla.stream.person;
+
 import java.util.List;
 import java.util.ArrayList;
 
 public final class People {
 
-    public static List<String> getList(){
+    public static List<String> getList() {
         final List<String> theList = new ArrayList<>();
         theList.add("John Smith");
         theList.add("Dorothy Newman");
@@ -19,8 +20,6 @@ public final class People {
 
         return new ArrayList<String>(theList);
     }
-
-
 
 
 }

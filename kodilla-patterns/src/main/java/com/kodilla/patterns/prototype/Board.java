@@ -12,41 +12,41 @@ public class Board extends Prototype {
         this.name = name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public Set<TaskList> getLists(){
+    public Set<TaskList> getLists() {
         return lists;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
 
         String s = "Board [ " + name + " ]\n";
-        for (TaskList taskList: lists){
+        for (TaskList taskList : lists) {
             s = s + taskList.toString() + "\n";
         }
 
         return s;
     }
 
-    public Board shallowCopy() throws CloneNotSupportedException{
-        return (Board)super.clone();
+    public Board shallowCopy() throws CloneNotSupportedException {
+        return (Board) super.clone();
     }
 
-    public Board deepCopy() throws CloneNotSupportedException{
+    public Board deepCopy() throws CloneNotSupportedException {
 
-        Board clonedBoard = (Board)super.clone();
+        Board clonedBoard = (Board) super.clone();
         clonedBoard.lists = new HashSet<>();
 
-        for(TaskList theList: lists){
+        for (TaskList theList : lists) {
             TaskList clonedList = new TaskList(theList.getName());
-            for (Task task: theList.getTasks()){
+            for (Task task : theList.getTasks()) {
                 clonedList.getTasks().add(task);
             }
             clonedBoard.getLists().add(clonedList);
@@ -54,7 +54,6 @@ public class Board extends Prototype {
 
         return clonedBoard;
     }
-
 
 
 }

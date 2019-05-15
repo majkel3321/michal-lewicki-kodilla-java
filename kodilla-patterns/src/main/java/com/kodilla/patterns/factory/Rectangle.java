@@ -6,21 +6,21 @@ public class Rectangle implements Shape {
     final private double width;
     final private double length;
 
-    public Rectangle(final String name, final double width, final double length){
+    public Rectangle(final String name, final double width, final double length) {
         this.name = name;
         this.width = width;
         this.length = length;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public double getArea(){
+    public double getArea() {
         return width * length;
     }
 
-    public double getCircumference(){
+    public double getCircumference() {
         return 2 * width + 2 * length;
     }
 

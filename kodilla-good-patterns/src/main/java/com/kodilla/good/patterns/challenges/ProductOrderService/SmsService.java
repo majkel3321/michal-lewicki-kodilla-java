@@ -10,7 +10,7 @@ public class SmsService implements InformationService {
 
     }
 
-    public void sendTextMessage(){
+    public void sendTextMessage() {
 
     }
 }

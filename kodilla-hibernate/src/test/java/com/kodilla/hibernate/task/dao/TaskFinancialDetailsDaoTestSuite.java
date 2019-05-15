@@ -19,15 +19,15 @@ public class TaskFinancialDetailsDaoTestSuite {
     TaskFinancialDetailsDao taskFinancialDetailsDao;
 
     @Test
-    public void testFindByPaid(){
+    public void testFindByPaid() {
 
-        TaskFinancialDetails taskFinancialDetails = new TaskFinancialDetails(new BigDecimal(115),false);
+        TaskFinancialDetails taskFinancialDetails = new TaskFinancialDetails(new BigDecimal(115), false);
         taskFinancialDetailsDao.save(taskFinancialDetails);
         int id = taskFinancialDetails.getId();
 
         List<TaskFinancialDetails> resultList = taskFinancialDetailsDao.findByPaid(false);
 
-        Assert.assertEquals(1,resultList.size());
+        Assert.assertEquals(1, resultList.size());
 
         taskFinancialDetailsDao.deleteById(id);
     }

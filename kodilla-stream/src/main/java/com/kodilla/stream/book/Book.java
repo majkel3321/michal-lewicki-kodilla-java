@@ -26,7 +26,7 @@ public final class Book {
         return publicationYear;
     }
 
-    public String getSignature(){
+    public String getSignature() {
         return signature;
     }
 

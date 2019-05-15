@@ -6,7 +6,7 @@ public class Continent {
 
     private List<Country> countries = new ArrayList<>();
 
-    public Continent(List<Country> countries){
+    public Continent(List<Country> countries) {
         this.countries = countries;
     }
 

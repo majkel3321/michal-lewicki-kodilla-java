@@ -33,9 +33,6 @@ import java.util.Date;
 )
 
 
-
-
-
 @Entity
 @Table(name = "TASKS")
 public final class Task {
@@ -47,13 +44,13 @@ public final class Task {
     private TaskFinancialDetails taskFinancialDetails;
     private TaskList taskList;
 
-    public Task(String description, int duration){
+    public Task(String description, int duration) {
         this.description = description;
         this.created = new Date();
         this.duration = duration;
     }
 
-    public Task(){
+    public Task() {
 
     }
 
@@ -61,23 +58,23 @@ public final class Task {
     @GeneratedValue
     @NotNull
     @Column(name = "ID", unique = true)
-    public int getId(){
+    public int getId() {
         return id;
     }
 
     @Column(name = "DESCRIPTION")
-    public String getDescription(){
+    public String getDescription() {
         return description;
     }
 
     @NotNull
     @Column(name = "CREATED")
-    public Date getCreated(){
+    public Date getCreated() {
         return created;
     }
 
     @Column(name = "DURATION")
-    public int getDuration(){
+    public int getDuration() {
         return duration;
     }
 

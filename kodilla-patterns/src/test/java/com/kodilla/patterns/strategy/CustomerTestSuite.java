@@ -7,7 +7,7 @@ import org.junit.Test;
 public class CustomerTestSuite {
 
     @Test
-    public void testDefaultInvestingStrategies(){
+    public void testDefaultInvestingStrategies() {
 
         Customer thomas = new IndividualYoungCustomer("Thomas Anderson");
         Customer john = new IndividualCustomer("John Wick");
@@ -23,12 +23,12 @@ public class CustomerTestSuite {
 
         Assert.assertEquals("[Aggressive predictor] Buy stock of XYZ", thomasShouldBuy);
         Assert.assertEquals("[Conservative predictor] Buy debentures of XYZ", johnShouldBuy);
-        Assert.assertEquals("[Balanced predictor] Buy shared units of Fund XYZ",kodillaShouldBuy);
+        Assert.assertEquals("[Balanced predictor] Buy shared units of Fund XYZ", kodillaShouldBuy);
 
     }
 
     @Test
-    public void testIndividualInvestingStrategy(){
+    public void testIndividualInvestingStrategy() {
 
         Customer thomas = new IndividualYoungCustomer("Thomas Anderson");
 
@@ -41,6 +41,6 @@ public class CustomerTestSuite {
         System.out.println("Thomas now should " + thomasShouldBuy);
 
 
-        Assert.assertEquals("[Conservative predictor] Buy debentures of XYZ",thomasShouldBuy);
+        Assert.assertEquals("[Conservative predictor] Buy debentures of XYZ", thomasShouldBuy);
     }
 }

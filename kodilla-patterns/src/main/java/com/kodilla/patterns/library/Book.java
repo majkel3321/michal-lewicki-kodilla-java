@@ -9,7 +9,7 @@ public class Book {
     private final String author;
     private final LocalDate publicationDate;
 
-    public Book(final String title, final String author, final LocalDate publicationDate){
+    public Book(final String title, final String author, final LocalDate publicationDate) {
         this.title = title;
         this.author = author;
         this.publicationDate = publicationDate;

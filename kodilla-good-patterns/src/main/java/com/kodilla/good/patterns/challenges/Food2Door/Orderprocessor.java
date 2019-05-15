@@ -4,14 +4,14 @@ public class Orderprocessor {
 
     private OrderService orderService;
 
-    public Orderprocessor(OrderService orderService){
+    public Orderprocessor(OrderService orderService) {
         this.orderService = orderService;
     }
 
-    public OrderDto process(final OrderRequest orderRequest){
+    public OrderDto process(final OrderRequest orderRequest) {
 
-        boolean isOrdered = orderService.order(orderRequest.getSupplier(),orderRequest.getProduct(),orderRequest.getOrderTime());
+        boolean isOrdered = orderService.order(orderRequest.getSupplier(), orderRequest.getProduct(), orderRequest.getOrderTime());
 
-        return new OrderDto(orderRequest.getSupplier(),isOrdered);
+        return new OrderDto(orderRequest.getSupplier(), isOrdered);
     }
 }

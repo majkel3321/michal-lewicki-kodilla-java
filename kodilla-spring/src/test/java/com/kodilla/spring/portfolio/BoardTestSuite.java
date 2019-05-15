@@ -30,7 +30,6 @@ public class BoardTestSuite {
         Assert.assertFalse(board.getDoneList().getTasks().isEmpty());
 
 
-
     }
 
 

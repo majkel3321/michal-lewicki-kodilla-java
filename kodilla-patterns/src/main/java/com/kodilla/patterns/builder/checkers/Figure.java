@@ -6,15 +6,15 @@ public class Figure {
     public static final String BLACK = "BLACK";
     final private String color;
 
-    public Figure(String color){
-        if (color.equals(WHITE) || color.equals(BLACK)){
+    public Figure(String color) {
+        if (color.equals(WHITE) || color.equals(BLACK)) {
             this.color = color;
-        }else{
+        } else {
             throw new IllegalStateException("Figures of checkers should be black or white!");
         }
     }
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 }

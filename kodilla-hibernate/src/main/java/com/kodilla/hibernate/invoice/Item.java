@@ -55,7 +55,7 @@ public class Item {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "INVOICE_ID")
-    public Invoice getInvoice(){
+    public Invoice getInvoice() {
         return invoice;
     }
 

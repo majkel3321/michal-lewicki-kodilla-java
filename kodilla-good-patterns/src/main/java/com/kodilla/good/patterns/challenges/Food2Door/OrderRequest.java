@@ -14,7 +14,7 @@ public class OrderRequest implements Order {
         this.orderTime = orderTime;
     }
 
-    public Supplier getSupplier(){
+    public Supplier getSupplier() {
         return supplier;
     }
 

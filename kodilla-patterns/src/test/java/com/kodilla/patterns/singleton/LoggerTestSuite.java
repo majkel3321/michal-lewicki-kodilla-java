@@ -7,15 +7,15 @@ import org.junit.Test;
 public class LoggerTestSuite {
 
     @BeforeClass
-    public static void createLog(){
+    public static void createLog() {
         Logger.getInstance().log("FirstLog");
     }
 
     @Test
-    public void testGetLastLog(){
+    public void testGetLastLog() {
 
         String result = Logger.getInstance().getLastLog();
-        Assert.assertEquals("FirstLog",result);
+        Assert.assertEquals("FirstLog", result);
 
     }
 }

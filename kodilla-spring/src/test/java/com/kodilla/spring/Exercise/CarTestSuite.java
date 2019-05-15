@@ -12,7 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class CarTestSuite {
 
     @Test
-    public void testSpeed(){
+    public void testSpeed() {
 
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Car car = context.getBean(Car.class);
@@ -22,7 +22,7 @@ public class CarTestSuite {
         car.drive(30);
 
 
-        Assert.assertEquals(225,car.drive(0));
+        Assert.assertEquals(225, car.drive(0));
 
 
     }

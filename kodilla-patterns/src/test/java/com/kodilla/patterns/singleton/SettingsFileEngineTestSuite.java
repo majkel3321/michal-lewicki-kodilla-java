@@ -5,26 +5,26 @@ import org.junit.*;
 public class SettingsFileEngineTestSuite {
 
     @BeforeClass
-    public static void openSettingsFile(){
+    public static void openSettingsFile() {
         SettingsFileEngine.getInstance().open("myApp.settings");
     }
 
     @AfterClass
-    public static void closeSettingsFile(){
+    public static void closeSettingsFile() {
         SettingsFileEngine.getInstance().close();
     }
 
     @Test
-    public void testGetFileName(){
+    public void testGetFileName() {
 
         String result = SettingsFileEngine.getInstance().getFileName();
         System.out.println("Opened : " + result);
 
-        Assert.assertEquals("myApp.settings",result);
+        Assert.assertEquals("myApp.settings", result);
     }
 
     @Test
-    public void testLoadSettings(){
+    public void testLoadSettings() {
 
         boolean result = SettingsFileEngine.getInstance().loadSettings();
 
@@ -32,7 +32,7 @@ public class SettingsFileEngineTestSuite {
     }
 
     @Test
-    public void testSaveSettings(){
+    public void testSaveSettings() {
 
         boolean result = SettingsFileEngine.getInstance().saveSettings();
 

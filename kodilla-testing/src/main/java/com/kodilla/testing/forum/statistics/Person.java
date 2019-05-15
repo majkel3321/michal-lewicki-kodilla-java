@@ -12,7 +12,7 @@ public class Person {
         this.age = age;
     }
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
 

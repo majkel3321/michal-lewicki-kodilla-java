@@ -2,14 +2,12 @@ package com.kodilla.exception.nullPointer;
 
 public class MessageSender {
 
-    public void sendMessageTo(User user, String message) throws MessageNotSendException{
+    public void sendMessageTo(User user, String message) throws MessageNotSendException {
 
         if (user != null) {
 
             System.out.println("Sending message: " + message + " to: " + user.getName());
-        }
-
-        else{
+        } else {
 
             throw new MessageNotSendException("Object User was null!");
         }

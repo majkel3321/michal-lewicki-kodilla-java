@@ -29,7 +29,7 @@ public class UserTestSuite {
     }
 
     @Test
-    public void testIndividualSharingStrategies(){
+    public void testIndividualSharingStrategies() {
 
         User mark = new YGeneration("Mark Knopfler");
 
@@ -41,6 +41,6 @@ public class UserTestSuite {
         markPost = mark.sharePost();
         System.out.println("Now Mark is using " + markPost);
 
-        Assert.assertEquals("Facebook",markPost);
+        Assert.assertEquals("Facebook", markPost);
     }
 }
