@@ -88,9 +88,5 @@ public class CompanyDaoTestSuite {
 
         employeeDao.deleteById(id);
         companyDao.deleteById(id2);
-
-
     }
-
-
 }
