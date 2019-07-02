@@ -114,8 +114,6 @@ public class CrudAppTestSuite {
     }
 
     private void deleteTestTask(String taskName){
-        boolean result = false;
-
         while (!driver.findElement(By.xpath("//select[1]")).isDisplayed()) ;
 
         driver.findElements(By.xpath("//form[@class=\"datatable__row\"]")).stream()
